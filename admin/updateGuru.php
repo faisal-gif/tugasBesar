@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="styleGuru.css">
-  <link rel="stylesheet" type="text/css" href="styleTabel.css">
+  
+    <link rel="stylesheet" href="https://objectstorage.ap-tokyo-1.oraclecloud.com/n/nres2v3gd4wj/b/uts/o/admin%2Fstyle.css" > 
+    <link rel="stylesheet" href="https://objectstorage.ap-tokyo-1.oraclecloud.com/n/nres2v3gd4wj/b/uts/o/admin%2Fstyles.css">
+    <link rel="stylesheet" href="https://objectstorage.ap-tokyo-1.oraclecloud.com/n/nres2v3gd4wj/b/uts/o/admin%2FstyleGuru.css">
 
 </head>
 <body>
@@ -26,14 +25,13 @@
     include 'koneksi.php';
     $nip=$_GET['nip'];
     $query="SELECT * FROM guru where nip='$nip'";
-    $result=mysqli_query($connect,$query);
+    $result=mysqli_query($connect, $query);
     ?>
     <table>
       <form method="GET" action="prosesUpdateGuru.php">
-       <?php 
+       <?php
        while ($row=mysqli_fetch_array($result)) {
-
-         ?>
+           ?>
          <div class="contact-form">
           <div class="input-fields">
             <h1 align="center"> GURU </h1>
@@ -55,16 +53,15 @@
              <option><?php echo $row['mapel'] ?></option>
              <?php
              include 'koneksi.php';
-             $query="select * from mapel";
-             $result=mysqli_query($connect,$query);
-             if (mysqli_num_rows($result)>0) {
-              while ($s=mysqli_fetch_assoc($result)) {
-                ?>
+           $query="select * from mapel";
+           $result=mysqli_query($connect, $query);
+           if (mysqli_num_rows($result)>0) {
+               while ($s=mysqli_fetch_assoc($result)) {
+                   ?>
                 <option><?php echo $s['mapel'] ?></option>
                 <?php
-              }
-            }
-            ?>
+               }
+           } ?>
           </select>
           <input type="text" class="input" placeholder="Nomor Telepon" name="no_telp" value="<?php echo $row['no_telp'] ?>">
           <input type="text" class="input" placeholder="Email" name="email" value="<?php echo $row['email'] ?>">
@@ -75,7 +72,7 @@
         </div>
         <input type="submit" name="Kirim" value="Kirim" class="btn">
         <?php
-      }
+       }
       ?>
     </div>
   </div>

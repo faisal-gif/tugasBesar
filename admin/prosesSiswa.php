@@ -10,7 +10,7 @@ $kelas=$_GET['kelas'];
 $alamat=$_GET['alamat'];
 
 
-$sql = "INSERT INTO siswa(nis,nama,jenis_kel,nomor_telepon,agama,kelas,alamat)
+$sql = "INSERT INTO siswa(nis,nama,jenis_kel,no_telp,agama,kelas,alamat)
 		VALUES ('$nis','$nama','$jenis_kel','$no_telp','$agama','$kelas','$alamat')";
 $sql2 = "INSERT INTO user(username,password,level)
 		VALUES ('$nis','$nis','pengunjung')";

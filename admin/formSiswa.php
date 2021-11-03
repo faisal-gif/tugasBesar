@@ -30,8 +30,8 @@
         <td><?php echo $row["nama"]; ?></td>
         <td><?php echo $row["agama"]; ?></td>
         <td><?php echo $row["jenis_kel"]; ?></td>
-        <td><?php echo $row["Kelas"]; ?></td>
-        <td><?php echo $row["nomor_telepon"];?></td>
+        <td><?php echo $row["kelas"]; ?></td>
+        <td><?php echo $row["no_telp"];?></td>
         <td><?php echo $row["alamat"]; ?></td>
         <td><a href="updateSiswa.php?nis=<?php echo $row["nis"]; ?>"> Edit </a></td>
         <td><a href="hapusSiswa.php?nis=<?php echo $row['nis']; ?>"> Hapus </a></td>
@@ -52,8 +52,8 @@
       <input type="text" class="input" placeholder="NIS" name="nis">
       <input type="text" class="input" placeholder="Nama" name="nama">
       <select class="input" name="jenis_kel">
-      <option value="P">P</option>
-      <option value="L">L</option>
+      <option value="pria">P</option>
+      <option value="wanita">L</option>
       </select>
       <input type="text" class="input" placeholder="Nomor Telepon" name="no_telp">
      <select class="input" name="agama">

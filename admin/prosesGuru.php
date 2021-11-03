@@ -13,7 +13,9 @@ $agama=$_GET['agama'];
 
 $sql = "INSERT INTO guru(nip,nama,jenis_kelamin,no_telp,email,status,alamat,mapel,agama)
 		VALUES ('$nip','$nama','$jenis_kel','$no_telp','$email','$status','$alamat','$mapel','$agama')";
-if (mysqli_query($connect,$sql)) {
+		$sql2 = "INSERT INTO user(username,password,level)
+		VALUES ('$nip','$nip','guru')";
+if (mysqli_query($connect,$sql)&&mysqli_query($connect,$sql2)) {
 	header("Location:admin.php?page=guru");
 }
 else{

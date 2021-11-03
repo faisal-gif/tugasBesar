@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
   
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="styleGuru.css">
-  <link rel="stylesheet" type="text/css" href="styleTabel.css">
+    <link rel="stylesheet" href="https://objectstorage.ap-tokyo-1.oraclecloud.com/n/nres2v3gd4wj/b/uts/o/admin%2Fstyle.css">
+    <link rel="stylesheet" href="https://objectstorage.ap-tokyo-1.oraclecloud.com/n/nres2v3gd4wj/b/uts/o/admin%2Fstyles.css">
+    <link rel="stylesheet" href="https://objectstorage.ap-tokyo-1.oraclecloud.com/n/nres2v3gd4wj/b/uts/o/admin%2FstyleGuru.css">
   
 </head>
 <body>
@@ -53,7 +52,7 @@
                <option>Budha</option>
              </select>
              <select class="input" name="kelas">
-              <option><?php echo $row['Kelas'] ?></option>
+              <option><?php echo $row['kelas'] ?></option>
               <?php
               include 'koneksi.php';
               $query="select * from kelas";
@@ -62,13 +61,13 @@
                 while ($s=mysqli_fetch_assoc($result)) {
                   ?>
                   
-                  <option><?php echo $s['Kelas'] ?></option>
+                  <option><?php echo $s['kelas'] ?></option>
                   <?php
                 }
               }
               ?>
             </select>
-            <input type="text" class="input" placeholder="Nomor Telepon" name="nomor_telepon" value="<?php echo $row['nomor_telepon'] ?>">
+            <input type="text" class="input" placeholder="Nomor Telepon" name="no_telp" value="<?php echo $row['no_telp'] ?>">
             
             <div class="msg">
               <textarea placeholder="Alamat" name="alamat"><?php echo $row['alamat'] ?></textarea>

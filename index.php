@@ -2,12 +2,12 @@
 <html>
 <head>
 	<title>Login</title>
-	<link rel="stylesheet" type="text/css" href="loginCss.css">
+	<link rel="stylesheet" type="text/css" href="https://objectstorage.ap-tokyo-1.oraclecloud.com/n/nres2v3gd4wj/b/uts/o/loginCss.css">
 </head>
 <body>
 
   <div id="card">
-    <img src="img\tut.png" id="cv">
+    <img src="https://objectstorage.ap-tokyo-1.oraclecloud.com/n/nres2v3gd4wj/b/uts/o/img%2Ftut.png" id="cv">
     <div id="card-content">
       <div id="card-title">
         
